@@ -1,0 +1,51 @@
+{
+    "name": "cachethq/emoji",
+    "description": "An Emoji Parser For Laravel 5",
+    "keywords": ["emoji", "parser", "Emoji", "Cachet", "CachetHQ"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cachet",
+            "email": "support@cachethq.io"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "graham-campbell/guzzle-factory": "^3.0",
+        "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*",
+        "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*",
+        "league/commonmark": "^0.18"
+    },
+    "require-dev": {
+        "graham-campbell/analyzer": "^2.1",
+        "graham-campbell/markdown": "^10.2",
+        "graham-campbell/testbench": "^5.1",
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^6.5|^7.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CachetHQ\\Emoji\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CachetHQ\\Tests\\Emoji\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "CachetHQ\\Emoji\\EmojiServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
