@@ -1,6 +1,6 @@
 {
     "name": "cachethq/emoji",
-    "description": "An Emoji Parser For Laravel 5",
+    "description": "An Emoji Parser For Laravel 5 and 6",
     "keywords": ["emoji", "parser", "Emoji", "Cachet", "CachetHQ"],
     "license": "MIT",
     "authors": [
@@ -12,8 +12,8 @@
     "require": {
         "php": "^7.1.3",
         "graham-campbell/guzzle-factory": "^3.0",
-        "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*",
-        "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*",
+        "illuminate/contracts": "^5.5|^6.0",
+        "illuminate/support": "^5.5|^6.0",
         "league/commonmark": "^0.18"
     },
     "require-dev": {
@@ -38,7 +38,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "2.0-dev"
         },
         "laravel": {
             "providers": [
