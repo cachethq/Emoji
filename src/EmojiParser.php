@@ -15,15 +15,16 @@ namespace CachetHQ\Emoji;
 
 use CachetHQ\Emoji\Repositories\RepositoryInterface;
 use League\CommonMark\Inline\Element\Image;
-use League\CommonMark\Inline\Parser\AbstractInlineParser;
+use League\CommonMark\Inline\Parser\InlineParserInterface;
 use League\CommonMark\InlineParserContext;
 
 /**
  * This is the emoji parser class.
  *
  * @author Graham Campbell <graham@alt-three.com>
+ * @author James Brooks <james@alt-three.com>
  */
-class EmojiParser extends AbstractInlineParser
+class EmojiParser implements InlineParserInterface
 {
     /**
      * The emoji repo.
@@ -52,11 +53,9 @@ class EmojiParser extends AbstractInlineParser
     }
 
     /**
-     * Get the characters that must be matched.
-     *
      * @return string[]
      */
-    public function getCharacters()
+    public function getCharacters(): array
     {
         return [':'];
     }
@@ -72,7 +71,7 @@ class EmojiParser extends AbstractInlineParser
      *
      * @return bool
      */
-    public function parse(InlineParserContext $inlineContext)
+    public function parse(InlineParserContext $inlineContext): bool
     {
         $cursor = $inlineContext->getCursor();
 

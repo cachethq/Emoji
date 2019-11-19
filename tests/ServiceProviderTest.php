@@ -22,6 +22,7 @@ use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
  * This is the service provider test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
+ * @author James Brooks <james@alt-three.com>
  */
 class ServiceProviderTest extends AbstractTestCase
 {
@@ -40,10 +41,5 @@ class ServiceProviderTest extends AbstractTestCase
     public function testEmojiExtensionIsInjectable()
     {
         $this->assertIsInjectable(EmojiExtension::class);
-    }
-
-    public function testEnvironmentIsSetup()
-    {
-        $this->assertTrue(in_array($this->app->make(EmojiParser::class), $this->app->make('markdown.environment')->getInlineParsers(), true));
     }
 }

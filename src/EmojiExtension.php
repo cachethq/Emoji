@@ -13,14 +13,16 @@ declare(strict_types=1);
 
 namespace CachetHQ\Emoji;
 
-use League\CommonMark\Extension\Extension;
+use League\CommonMark\ConfigurableEnvironmentInterface;
+use League\CommonMark\Extension\ExtensionInterface;
 
 /**
  * This is the emoji extension class.
  *
  * @author Graham Campbell <graham@alt-three.com>
+ * @author James Brooks <james@alt-three.com>
  */
-class EmojiExtension extends Extension
+class EmojiExtension implements ExtensionInterface
 {
     /**
      * The emoji parser.
@@ -42,12 +44,12 @@ class EmojiExtension extends Extension
     }
 
     /**
-     * Returns a list of inline parsers to add to the existing list.
+     * Register extensions.
      *
-     * @return \League\CommonMark\Inline\Parser\InlineParserInterface[]
+     * @return void
      */
-    public function getInlineParsers()
+    public function register(ConfigurableEnvironmentInterface $environment)
     {
-        return [$this->parser];
+        $environment->addInlineParser($this->parser);
     }
 }
