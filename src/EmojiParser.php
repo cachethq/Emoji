@@ -75,11 +75,6 @@ class EmojiParser implements InlineParserInterface
     {
         $cursor = $inlineContext->getCursor();
 
-        $previous = $cursor->peek(-1);
-        if ($previous !== null && $previous !== ' ') {
-            return false;
-        }
-
         $saved = $cursor->saveState();
 
         $cursor->advance();
@@ -87,14 +82,6 @@ class EmojiParser implements InlineParserInterface
         $handle = $cursor->match('/^[a-z0-9\+\-_]+:/');
 
         if (!$handle) {
-            $cursor->restoreState($saved);
-
-            return false;
-        }
-
-        $next = $cursor->peek(0);
-
-        if ($next !== null && $next !== ' ') {
             $cursor->restoreState($saved);
 
             return false;

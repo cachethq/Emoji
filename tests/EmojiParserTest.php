@@ -30,9 +30,10 @@ class EmojiParserTest extends AbstractTestCase
             [':+1:', '<p><img class="emoji" data-emoji="+1" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png?v5" alt="+1" /></p>'],
             ['* :airplane:', "<ul>\n<li>\n<img class=\"emoji\" data-emoji=\"airplane\" src=\"https://assets-cdn.github.com/images/icons/emoji/unicode/2708.png?v5\" alt=\"airplane\" />\n</li>\n</ul>"],
             ['foo bar baz: lol', '<p>foo bar baz: lol</p>'],
-            [':+1:123', '<p>:+1:123</p>'],
+            [':+1:123', '<p><img class="emoji" data-emoji="+1" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png?v5" alt="+1" />123</p>'],
             [':123123123:', '<p>:123123123:</p>'],
             [':+1 :', '<p>:+1 :</p>'],
+            [':+1::+1:', '<p><img class="emoji" data-emoji="+1" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png?v5" alt="+1" /><img class="emoji" data-emoji="+1" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png?v5" alt="+1" /></p>'],
             [':8ball: :100:', '<p><img class="emoji" data-emoji="8ball" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3b1.png?v5" alt="8ball" /> <img class="emoji" data-emoji="100" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4af.png?v5" alt="100" /></p>'],
         ];
     }
