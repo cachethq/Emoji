@@ -14,7 +14,7 @@
         "graham-campbell/guzzle-factory": "^3.0",
         "illuminate/contracts": "^7.0|^8.0|^9.0",
         "illuminate/support": "^7.0|^8.0|^9.0",
-        "league/commonmark": "^2.3"
+        "league/commonmark": "^1.0"
     },
     "require-dev": {
         "graham-campbell/analyzer": "^3.1",
