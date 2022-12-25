@@ -1,6 +1,6 @@
 {
-    "name": "cachethq/emoji",
-    "description": "An Emoji Parser For Laravel 5 and 6 and 7",
+    "name": "steffjenl/emoji",
+    "description": "An Emoji Parser For Laravel 7",
     "keywords": ["emoji", "parser", "Emoji", "Cachet", "CachetHQ"],
     "license": "MIT",
     "authors": [
